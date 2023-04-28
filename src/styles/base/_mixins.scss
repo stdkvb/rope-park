@@ -196,8 +196,16 @@
 	font-size: 64px;
 	font-weight: 700;
 }
+@mixin bold-65 {
+	font-size: 65px;
+	font-weight: 700;
+}
 @mixin bold-70 {
 	font-size: 70px;
+	font-weight: 700;
+}
+@mixin bold-93 {
+	font-size: 93px;
 	font-weight: 700;
 }
 @mixin bold-106 {

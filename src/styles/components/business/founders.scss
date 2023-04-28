@@ -5,6 +5,7 @@
 	padding-bottom: 60px;
 	background-size: cover;
 	background-position: bottom;
+	position: relative;
 
 	@include desktop_huge {
 		height: 60vw;
