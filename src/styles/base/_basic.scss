@@ -20,11 +20,11 @@ h1 {
 	color: $white;
 
 	@include tablet {
-		@include regular-48
+		@include regular-48;
 	}
 
 	@include mobile {
-		@include regular-42
+		@include regular-42;
 	}
 }
 
@@ -34,21 +34,33 @@ h2 {
 	color: $white;
 
 	@include tablet {
-		@include regular-32
+		@include regular-32;
 	}
 
 	@include mobile {
-		@include regular-28
+		@include regular-28;
 	}
 }
 
 h3 {
-	@include medium-36;
+	@include medium-54;
+
+	@include tablet {
+		@include medium-40;
+	}
+
+	@include mobile {
+		@include medium-34;
+	}
 }
 
 p {
 	@include FontFamilyRobotoRegular;
 	@include regular-18;
+
+	@include mobile {
+		@include regular-16;
+	}
 }
 
 span {

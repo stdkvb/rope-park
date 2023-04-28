@@ -1,0 +1,120 @@
+.founders {
+	height: 1080px;
+	background-image: url(@icons/founders-background.svg);
+	padding-top: 211px;
+	padding-bottom: 60px;
+	background-size: cover;
+	background-position: bottom;
+
+	@include desktop_huge {
+		height: 60vw;
+		padding-top: 5vw;
+	}
+
+	@include desktop_base {
+		background: none;
+		height: unset;
+		padding-bottom: 0;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	@include tablet {
+		height: unset;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+	}
+
+	&__text {
+		max-width: 700px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		@include desktop_huge {
+			max-width: 40vw;
+		}
+
+		@include desktop_base {
+			max-width: unset;
+		}
+
+		h3 {
+			margin-bottom: 56px;
+			color: $brown;
+
+			@include mobile {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		img {
+			width: 100%;
+		}
+
+		@include desktop_huge {
+			width: 50vw;
+		}
+
+		@include desktop_base {
+			position: relative;
+			justify-self: flex-end;
+			width: 100%;
+		}
+	}
+
+	&__founder {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		&:first-of-type {
+			bottom: 10%;
+			left: 10%;
+		}
+
+		&:last-of-type {
+			bottom: 12%;
+			left: 60%;
+		}
+
+		span {
+			clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+			border-radius: 5px;
+			padding: 8px 31px;
+			width: fit-content;
+
+			&:first-of-type {
+				@include FontFamilyOswaldRegular;
+				background-color: $green;
+				color: $brown;
+				@include regular-20;
+
+				@include mobile {
+					@include regular-14;
+				}
+			}
+
+			&:last-of-type {
+				background-color: $white;
+				color: $gray;
+				@include FontFamilyRobotoRegular;
+				@include regular-14;
+				margin: -5px -10px 0 0;
+
+				@include mobile {
+					display: none;
+				}
+			}
+		}
+	}
+
+}
