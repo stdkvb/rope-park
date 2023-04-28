@@ -1,0 +1,70 @@
+.specs {
+	padding: 120px 0 208px 0;
+	background-color: $dirty;
+
+	@include tablet {
+		background-color: unset;
+		padding: 56px 0 0 0;
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns: 0.5fr 1fr;
+		grid-template-areas:
+		'title title'
+		'text img';
+		gap: 60px;
+
+		@include tablet {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+		}
+	}
+
+	h3 {
+		grid-area: title;
+
+		@include mobile {
+			@include regular-34;
+		}
+
+		span {
+			@include FontFamilyOswaldMedium;
+			color: $dark-green;
+			@include medium-54;
+
+			@include tablet {
+				@include medium-40;
+			}
+
+			@include mobile {
+				@include medium-34;
+			}
+		}
+	}
+
+	&__text {
+		grid-area: text;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		h4 {
+			@include FontFamilyRobotoMedium;
+			@include medium-18;
+		}
+
+		span {
+			color: $light-gray;
+			@include regular-18;
+			margin-top: 4px;
+			line-height: 125%;
+		}
+	}
+
+	&__image {
+		grid-area: img;
+		width: 100%;
+	}
+}
