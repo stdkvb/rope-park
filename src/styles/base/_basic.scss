@@ -1,0 +1,88 @@
+* {
+	@include FontFamilyOswaldRegular;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 120%;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	position: relative;
+}
+
+h1 {
+	@include regular-86;
+	color: $white;
+
+	@include tablet {
+		@include regular-48
+	}
+
+	@include mobile {
+		@include regular-42
+	}
+}
+
+h2 {
+	@include FontFamilyRobotoRegular;
+	@include regular-40;
+	color: $white;
+
+	@include tablet {
+		@include regular-32
+	}
+
+	@include mobile {
+		@include regular-28
+	}
+}
+
+h3 {
+	@include medium-36;
+}
+
+p {
+	@include FontFamilyRobotoRegular;
+	@include regular-18;
+}
+
+span {
+	@include FontFamilyRobotoRegular;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+
+	:disabled {
+		cursor: default;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1588px;
+	padding: 0 60px;
+	margin: 0 auto;
+
+	@include tablet {
+		padding: 0 30px;
+	}
+
+	@include mobile {
+		padding: 0 16px;
+	}
+}

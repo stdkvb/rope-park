@@ -1,0 +1,204 @@
+@mixin contain {
+  width: 100%;
+  height: 100%;
+	object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin errorMessageStyles {
+	display: none;
+	color: $error40;
+	font-size: .875rem;
+}
+
+@mixin regular-12 {
+	font-size: 12px;
+	font-weight: 400;
+}
+@mixin regular-14 {
+	font-size: 14px;
+	font-weight: 400;
+}
+@mixin regular-14-uppercase {
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+@mixin regular-16 {
+	font-size: 16px;
+	font-weight: 400;
+}
+@mixin regular-18 {
+	font-size: 18px;
+	font-weight: 400;
+}
+@mixin regular-20 {
+	font-size: 20px;
+	font-weight: 400;
+}
+@mixin regular-20-uppercase {
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+@mixin regular-22 {
+	font-size: 22px;
+	font-weight: 400;
+}
+@mixin regular-24 {
+	font-size: 24px;
+	font-weight: 400;
+}
+@mixin regular-28 {
+	font-size: 28px;
+	font-weight: 400;
+}
+@mixin regular-28-uppercase {
+	font-size: 28px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+@mixin regular-32 {
+	font-size: 32px;
+	font-weight: 400;
+}
+@mixin regular-32-uppercase {
+	font-size: 32px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+@mixin regular-36 {
+	font-size: 36px;
+	font-weight: 400;
+}
+@mixin regular-40 {
+	font-size: 40px;
+	font-weight: 400;
+}
+@mixin regular-42 {
+	font-size: 42px;
+	font-weight: 400;
+}
+@mixin regular-48 {
+	font-size: 48px;
+	font-weight: 400;
+}
+@mixin regular-56 {
+	font-size: 56px;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+@mixin regular-64 {
+	font-size: 64px;
+	font-weight: 400;
+}
+@mixin regular-86 {
+	font-size: 86px;
+	font-weight: 400;
+}
+@mixin medium-12 {
+	font-size: 12px;
+	font-weight: 500;
+}
+@mixin medium-14 {
+	font-size: 14px;
+	font-weight: 500;
+}
+@mixin medium-16 {
+	font-size: 16px;
+	font-weight: 500;
+}
+@mixin medium-18 {
+	font-size: 18px;
+	font-weight: 500;
+}
+@mixin medium-20 {
+	font-size: 20px;
+	font-weight: 500;
+}
+@mixin medium-24 {
+	font-size: 24px;
+	font-weight: 500;
+}
+@mixin medium-28 {
+	font-size: 28px;
+	font-weight: 500;
+}
+@mixin medium-36 {
+	font-size: 36px;
+	font-weight: 500;
+}
+@mixin medium-40 {
+	font-size: 40px;
+	font-weight: 500;
+}
+@mixin medium-48 {
+	font-size: 48px;
+	font-weight: 500;
+}
+@mixin medium-54 {
+	font-size: 54px;
+	font-weight: 500;
+}
+@mixin medium-56 {
+	font-size: 56px;
+	font-weight: 500;
+}
+@mixin medium-64 {
+	font-size: 64px;
+	font-weight: 500;
+}
+@mixin bold-14 {
+	font-size: 14px;
+	font-weight: 700;
+}
+@mixin bold-16 {
+	font-size: 16px;
+	font-weight: 700;
+}
+@mixin bold-18 {
+	font-size: 18px;
+	font-weight: 700;
+}
+@mixin bold-20 {
+	font-size: 20px;
+	font-weight: 700;
+}
+@mixin bold-24 {
+	font-size: 24px;
+	font-weight: 700;
+}
+@mixin bold-28 {
+	font-size: 28px;
+	font-weight: 700;
+}
+@mixin bold-36 {
+	font-size: 36px;
+	font-weight: 700;
+}
+@mixin bold-48 {
+	font-size: 48px;
+	font-weight: 700;
+}
+@mixin bold-56 {
+	font-size: 56px;
+	font-weight: 700;
+}
+@mixin bold-64 {
+	font-size: 64px;
+	font-weight: 700;
+}
+@mixin bold-70 {
+	font-size: 70px;
+	font-weight: 700;
+}
+@mixin bold-106 {
+	font-size: 106px;
+	font-weight: 700;
+}
+
+

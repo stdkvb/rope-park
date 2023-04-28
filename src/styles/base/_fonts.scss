@@ -1,0 +1,78 @@
+@font-face {
+	font-family: Oswald;
+	font-display: swap;
+	src: url("@fonts/Oswald-Bold.woff2") format("woff2"), url("@fonts/Oswald-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@mixin FontFamilyOswaldBold {
+	font-family: Oswald, sans-serif;
+	font-weight: 700;
+	line-height: 140%;
+}
+
+@font-face {
+	font-family: Oswald;
+	font-display: swap;
+	src: url("@fonts/Oswald-Medium.woff2") format("woff2"), url("@fonts/Oswald-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@mixin FontFamilyOswaldMedium {
+	font-family: Oswald, sans-serif;
+	font-weight: 500;
+	line-height: 140%;
+}
+
+@font-face {
+	font-family: Roboto;
+	font-display: swap;
+	src: url("@fonts/Roboto-Medium.woff2") format("woff2"), url("@fonts/Roboto-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@mixin FontFamilyRobotoMedium {
+	font-family: Roboto, sans-serif;
+	font-weight: 500;
+	line-height: 140%;
+}
+
+@font-face {
+	font-family: Oswald;
+	font-display: swap;
+	src: url("@fonts/Oswald-Regular.woff2") format("woff2"), url("@fonts/Oswald-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin FontFamilyOswaldRegular {
+	font-family: Oswald, sans-serif;
+	font-weight: 400;
+	line-height: 140%;
+}
+
+@font-face {
+	font-family: Roboto;
+	font-display: swap;
+	src: url("@fonts/Roboto-Regular.woff2") format("woff2"), url("@fonts/Roboto-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin FontFamilyRobotoRegular {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	line-height: 140%;
+}
+
+@font-face {
+	font-family: Roboto;
+	font-display: swap;
+	src: url("@fonts/Roboto-Bold.woff2") format("woff2"), url("@fonts/Roboto-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@mixin FontFamilyRobotoBold {
+	font-family: Roboto, sans-serif;
+	font-weight: 700;
+	line-height: 140%;
+}
+

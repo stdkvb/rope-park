@@ -1,0 +1,102 @@
+.main-screen {
+	padding-top: 330px;
+	padding-bottom: 150px;
+	height: 1080px;
+	background-size: 100%;
+
+	@media screen and (max-width: 1920px) {
+		background-size: auto;
+		background-position: right;
+	}
+
+	@include tablet {
+		height: unset;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		padding-top: 162px;
+		padding-bottom: 60px;
+	}
+
+	@include mobile {
+		background-position: -700px 0;
+	}
+
+	.container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__title {
+		display: grid;
+		grid-template-columns: 850px 266px;
+		justify-content: space-between;
+		gap: 40px;
+
+		div {
+			height: 85px;
+			align-items: center;
+			justify-content: flex-end;
+			display: flex;
+			gap: 30px;
+			margin-top: 20px;
+
+			span {
+				color: $white;
+				@include regular-28;
+				line-height: 120%;
+			}
+
+			@include desktop_base {
+				display: none;
+			}
+		}
+
+		@include desktop_base {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	nav {
+		display: none;
+
+		@include tablet {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			margin: 52px 0 60px 0;
+
+			a {
+				text-decoration: underline;
+				color: $green;
+				@include FontFamilyRobotoRegular;
+				@include regular-24;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+
+		@include mobile {
+			flex-direction: column;
+		}
+
+		span {
+			color: $white;
+			@include regular-32-uppercase;
+
+			@include tablet {
+				@include regular-28-uppercase;
+			}
+
+			@include mobile {
+				@include regular-20-uppercase;
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+.header {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: transparent;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 0.5fr;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+  right: 0;
+  margin: 0 auto;
+
+	@include tablet {
+		grid-template-columns: 1fr 1fr;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	@include mobile {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+
+	&__logo {
+		width: 200px;
+		height: 60px;
+
+		@include mobile {
+			width: 100px;
+		height: 30px;
+		}
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+
+		a {
+			@include regular-20;
+			color: $white;
+			text-align: center;
+		}
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__phone {
+		@include regular-36;
+		color: $white;
+		justify-self: flex-end;
+		text-align: right;
+
+		img {
+			display: none;
+		}
+
+		@include mobile {
+			@include regular-16;
+
+			img {
+				display: inline-block;
+				margin-right: 8px;
+			}
+		}
+
+
+	}
+}
