@@ -1,0 +1,64 @@
+.gallery {
+	background-color: $dirty;
+	padding-top: 80px;
+
+	@include mobile {
+		padding-top: 56px;
+	}
+
+	.gallery__preview {
+		padding: 0 16px;
+
+		.swiper-slide {
+			overflow: hidden;
+		}
+
+		@include min_mobile {
+			display: none;
+		}
+	}
+
+	.gallery__swiper {
+		.swiper-wrapper {
+			display: grid;
+			grid-template-columns: .25fr .25fr .25fr 0.25fr 0.25fr 0.25fr;
+			grid-template-rows: 0.4fr 0.2fr 0.4fr;
+			gap: 16px;
+			grid-template-areas:
+				"a a b c c d"
+				"a a f f g d"
+				"e e f f g h";
+
+			@include mobile {
+				display: flex;
+				gap: 0;
+				padding-top: 16px;
+			}
+
+			.swiper-slide {
+				width: 100%;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				&:nth-child(1) { grid-area: a; }
+				&:nth-child(2) { grid-area: b; }
+				&:nth-child(3) { grid-area: c; }
+				&:nth-child(4) { grid-area: d; }
+				&:nth-child(5) { grid-area: e; }
+				&:nth-child(6) { grid-area: f; }
+				&:nth-child(7) { grid-area: g; }
+				&:nth-child(8) { grid-area: h; }
+
+				@include mobile {
+					height: 78px;
+				}
+			}
+		}
+	}
+}
+
