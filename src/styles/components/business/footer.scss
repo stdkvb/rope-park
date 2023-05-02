@@ -1,0 +1,74 @@
+footer {
+	background-color: $black-green;
+	color: $white-gray;
+
+
+	.container {
+		padding: 25px 119px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+
+		span {
+			@include regular-16;
+			color: $white-gray;
+			@include FontFamilyRobotoRegular;
+
+			@include mobile {
+				text-align: center;
+				@include regular-16;
+			}
+		}
+
+		a {
+			@include FontFamilyRobotoRegular;
+			@include medium-16;
+			color: $white-gray;
+			width: fit-content;
+
+			@include mobile {
+				@include regular-16;
+			}
+		}
+
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			text-align: center;
+			a {
+				@include FontFamilyRobotoRegular;
+				@include regular-14;
+				color: $white-gray;
+				width: fit-content;
+
+				@include mobile {
+					@include regular-16;
+				}
+			}
+
+			@include desktop_small {
+				gap: 16px;
+
+				span {
+					display: none;
+				}
+			}
+
+			@include mobile {
+				flex-direction: column;
+				gap: 8px;
+			}
+		}
+
+		@include desktop {
+			padding: 25px 60px;
+		}
+
+		@include tablet {
+			flex-direction: column;
+			gap: 8px;
+		}
+	}
+}
