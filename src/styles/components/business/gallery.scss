@@ -1,9 +1,12 @@
 .gallery {
 	background-color: $dirty;
 	padding-top: 80px;
+	padding-bottom: 80px;
 
 	@include mobile {
 		padding-top: 56px;
+		padding-bottom: 27px;
+
 	}
 
 	.gallery__preview {
@@ -21,7 +24,7 @@
 	.gallery__swiper {
 		.swiper-wrapper {
 			display: grid;
-			grid-template-columns: .25fr .25fr .25fr 0.25fr 0.25fr 0.25fr;
+			grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
 			grid-template-rows: 0.4fr 0.2fr 0.4fr;
 			gap: 16px;
 			grid-template-areas:

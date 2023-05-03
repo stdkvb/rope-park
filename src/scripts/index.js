@@ -1,15 +1,17 @@
 const breakpoint = window.matchMedia('(min-width:575px)')
-let mySwiper
+let gallerySwiper
+let frameSwiper
 const breakpointChecker = function () {
 	if (breakpoint.matches === true) {
-		if (mySwiper !== undefined) mySwiper.destroy(true, true)
+		if (gallerySwiper !== undefined) gallerySwiper.destroy(true, true)
+		if (frameSwiper !== undefined) frameSwiper.destroy(true, true)
 	} else if (breakpoint.matches === false) {
 		return enableSwiper()
 	}
 }
 
 const enableSwiper = function () {
-	mySwiper = new Swiper('.gallery__preview', {
+	gallerySwiper = new Swiper('.gallery__preview', {
 		slidesPerView: 1,
 		spaceBetween: 16,
 		thumbs: {
@@ -20,6 +22,10 @@ const enableSwiper = function () {
 				slideToClickedSlide: true,
 			}
 		}
+	})
+	frameSwiper = new Swiper('.frame__swiper', {
+		slidesPerView: 1,
+		spaceBetween: 16
 	})
 }
 breakpoint.addListener(breakpointChecker)

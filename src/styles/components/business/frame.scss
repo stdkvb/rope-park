@@ -1,0 +1,52 @@
+.frame {
+	background-color: $dirty;
+	padding-top: 80px;
+	padding-bottom: 144px;
+
+	@include mobile {
+		padding-top: 27px;
+		padding-bottom: 27px;
+	}
+
+	h3 {
+		margin-bottom: 24px;
+	}
+
+	p {
+		margin-bottom: 48px;
+	}
+
+	.swiper-wrapper {
+		display: grid;
+			grid-template-columns: repeat(12, 0.08fr);
+			grid-template-rows: max-content;
+			gap: 32px;
+			grid-template-areas:
+				"a a a a  b b b b c c c c"
+				"d d d e e e f f f g g g";
+
+		@include mobile {
+			display: flex;
+			gap: 0;
+			padding-top: 16px;
+		}
+
+		.swiper-slide {
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			&:nth-child(1) { grid-area: a; }
+			&:nth-child(2) { grid-area: b; }
+			&:nth-child(3) { grid-area: c; }
+			&:nth-child(4) { grid-area: d; }
+			&:nth-child(5) { grid-area: e; }
+			&:nth-child(6) { grid-area: f; }
+			&:nth-child(7) { grid-area: g; }
+		}
+	}
+}
