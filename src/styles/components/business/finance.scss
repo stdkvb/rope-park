@@ -1,0 +1,94 @@
+.finance {
+	padding: 80px 0 156px 0;
+
+	@include mobile {
+		padding: 56px 0 56px 0;
+	}
+	.container {
+		display: grid;
+		grid-template-areas:
+		 'title title'
+		 'text link'
+		 'img img';
+		gap: 12px;
+		overflow: hidden;
+
+		@include tablet_small {
+			display: flex;
+			flex-direction: column;
+		}
+
+		h3 {
+			grid-area: title;
+
+			@include mobile {
+				@include regular-34;
+			}
+
+			span {
+				@include FontFamilyOswaldMedium;
+				color: $dark-green;
+				@include medium-54;
+
+				@include tablet {
+					@include medium-40;
+				}
+
+				@include mobile {
+					@include medium-34;
+				}
+			}
+		}
+
+		p {
+			grid-area: text;
+			max-width: 897px;
+			@include regular-28;
+
+			@include tablet {
+				@include regular-22;
+			}
+
+			@include mobile {
+				@include regular-18;
+			}
+		}
+
+		a {
+			height: 78px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			grid-area: link;
+			padding: 20px 40px;
+			background-color: $green;
+			justify-self: flex-end;
+			align-self: flex-end;
+			color: #342520;
+			@include regular-24;
+
+			@include tablet {
+				width: 100%;
+			}
+		}
+
+		.finance__img-container {
+			grid-area: img;
+			margin-top: 64px;
+			scrollbar-color: $green $white;
+
+			@include tablet {
+				overflow-x: scroll;
+				overflow-y: hidden;
+				margin-top: 24px;
+				padding-bottom: 24px;
+			}
+
+			img {
+				min-width: 900px;
+				width: 100%;
+			};
+		}
+	}
+}
