@@ -1,0 +1,133 @@
+.choise {
+	.container {
+		padding: 0;
+	}
+
+	h3 {
+		padding: 0 60px;
+
+		@include tablet {
+			padding: 0 30px;
+		}
+
+		@include mobile {
+			@include regular-34;
+			padding: 0 16px;
+		}
+
+		span {
+			@include FontFamilyOswaldMedium;
+			color: $dark-green;
+			@include medium-54;
+
+			@include tablet {
+				@include medium-40;
+			}
+
+			@include mobile {
+				@include medium-34;
+			}
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 244px);
+		gap: 32px;
+		margin: 60px 60px 0 60px;
+		grid-template-areas:
+			'a b c d'
+			'e f i i'
+			'g h i i';
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(6, 244px);
+			grid-template-areas:
+			'a b'
+			'c d'
+			'e f'
+			'g h'
+			'i i'
+			'i i';
+			margin: 60px 30px;
+		}
+
+		@include mobile {
+			margin: 24px 0 0 0;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__card {
+		padding: 24px;
+		background-position: right bottom;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: 1px solid #C4C4C4;
+		border-radius: 4px;
+
+		@include mobile {
+			height: 244px;
+			margin: 0 16px;
+		}
+
+		span {
+			@include medium-18;
+		}
+
+		&:nth-child(1) { grid-area: a;}
+		&:nth-child(2) { grid-area: b;}
+		&:nth-child(3) { grid-area: c;}
+		&:nth-child(4) { grid-area: d;}
+		&:nth-child(5) { grid-area: e;}
+		&:nth-child(6) { grid-area: f;}
+		&:nth-child(7) { grid-area: g;}
+		&:nth-child(8) { grid-area: h;}
+		&:nth-child(9) { grid-area: i;}
+
+		&_boss {
+			border: none;
+			padding: 71px 30px;
+			background-size: cover;
+
+			@include mobile {
+				height: unset;
+				text-align: center;
+				padding: 56px 18px;
+				background-position: top left;
+				background-size: 210%;
+				margin: 0;
+			}
+
+			h4 {
+				color: $white;
+				@include medium-48;
+				max-width: 350px;
+				margin-bottom: 12px;
+
+				@include mobile {
+					@include regular-34;
+					max-width: unset;
+				}
+
+				span {
+					@include FontFamilyOswaldMedium;
+					color: $green;
+					@include medium-48-uppercase;
+
+					@include mobile {
+						@include regular-34;
+					}
+				}
+			}
+
+			span {
+				color: $white;
+				@include medium-24;
+			}
+		}
+	}
+}

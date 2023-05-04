@@ -1,0 +1,36 @@
+.video-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	max-height: 384px;
+	max-width: 719px;
+
+	& video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.video-controler {
+	background-image: url(@icons/playVideo.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 84px;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	border: none;
+
+	&.active {
+		display: none;
+	}
+}
