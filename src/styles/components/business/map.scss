@@ -1,8 +1,10 @@
 .map {
 	padding-top: 90px;
+	padding-bottom: 90px;
 
 	@include mobile {
 		padding-top: 55px;
+		padding-bottom: 55px;
 	}
 
 	&__header {
@@ -79,19 +81,12 @@
 		max-width: 1588px;
 		margin: 48px auto 0 auto;
 		text-align: center;
+		padding: 0 100px;
 
 		@include desktop_medium {
 			margin: 48px 0 0 0;
 			overflow-x: scroll;
 		}
-
-    svg {
-        & g {
-            cursor: pointer;
-            position: absolute;
-            top: 0;
-        }
-    }
 	}
 
 	&__card {
@@ -101,13 +96,15 @@
 		box-shadow: 0px 2.1861px 5.46525px rgba(91, 134, 48, 0.35);
     max-width: 280px;
     position: absolute;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
     transition: $transitionDuration;
     z-index: 1;
-		top: 390px;
-		left: 39px;
+		top: 325px;
+		left: 65px;
+
+		@include desktop_medium {
+			left: 18px;
+		}
+
 
 		&::after {
 			content: '';
@@ -127,12 +124,6 @@
 		span {
 			@include medium-18;
 		}
-
-    &.active{
-        display: block;
-        visibility: visible;
-        opacity: 1;
-    }
 	}
 }
 

@@ -1,20 +1,17 @@
 .specs {
 	padding: 120px 0 208px 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+
+	@include tablet {
+		background: none;
+	}
 
 	&_dirty {
 		background-color: $dirty;
 	}
 
-	&_background {
-		background-image: url(@icons/specs-background.svg);
-		background-size: 100%;
-		background-repeat: no-repeat;
-		background-position: bottom;
-
-		@include tablet {
-			background: none;
-		}
-	}
 
 	@include tablet {
 		background-color: unset;

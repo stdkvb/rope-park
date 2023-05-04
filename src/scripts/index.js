@@ -1,3 +1,4 @@
+// disable swipers on desktop
 const breakpoint = window.matchMedia('(min-width:575px)')
 let gallerySwiper
 let frameSwiper
@@ -15,7 +16,6 @@ const breakpointChecker = function () {
 		return enableSwiper()
 	}
 }
-
 const enableSwiper = function () {
 	gallerySwiper = new Swiper('.gallery__preview', {
 		slidesPerView: 1,
@@ -25,7 +25,7 @@ const enableSwiper = function () {
 				el: '.gallery__swiper',
 				slidesPerView: 4,
 				spaceBetween: 16,
-				slideToClickedSlide: true,
+				slideToClickedSlide: true
 			}
 		}
 	})
@@ -59,11 +59,12 @@ const enableSwiper = function () {
 breakpoint.addListener(breakpointChecker)
 breakpointChecker()
 
+// video controller
 const playButtons = document.querySelectorAll('.video-controler')
-playButtons.forEach((elem) =>{
+playButtons.forEach((elem) => {
 	elem.addEventListener('click', () => {
-			elem.classList.add('active')
-			elem.previousElementSibling.play()
+		elem.classList.add('active')
+		elem.previousElementSibling.play()
 	})
 
 	elem.previousElementSibling.addEventListener('click', () => {

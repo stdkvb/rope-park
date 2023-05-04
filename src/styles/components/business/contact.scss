@@ -2,9 +2,13 @@
 	background-color: $dirty;
 	background-repeat: no-repeat;
 	background-position: bottom right;
-	background-size: contain;
+	background-size: cover;
 	height: 1080px;
 	padding: 80px 0;
+
+	@include desktop_huge {
+		background-size: contain;
+	}
 
 	@include mobile {
 		height: 930px;
