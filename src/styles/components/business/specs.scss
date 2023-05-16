@@ -20,7 +20,7 @@
 
 	.container {
 		display: grid;
-		grid-template-columns: 0.5fr 1fr;
+		grid-template-columns: 0.7fr 1fr;
 		grid-template-areas:
 		'title title'
 		'text img';
@@ -78,11 +78,24 @@
 		grid-area: text;
 		display: flex;
 		flex-direction: column;
-		gap: 16px;
+		gap: 32px;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		li {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
 
 		h4 {
 			@include FontFamilyRobotoMedium;
 			@include medium-18;
+			margin-bottom: 4px;
 		}
 
 		span {
@@ -94,12 +107,19 @@
 	}
 
 	&__table {
-		@include medium-34;
 		min-width: 485px;
 
 		@include mobile {
-			@include regular-28;
 			min-width: unset;
+		}
+
+		h4 {
+			@include medium-34;
+			margin-bottom: 32px;
+			@include mobile {
+				@include regular-28;
+				margin-bottom: 16px;
+			}
 		}
 
 		li {
@@ -179,6 +199,7 @@
 	}
 
 	&__image {
+		max-width: 879px;
 		grid-area: img;
 		width: 100%;
 		display: grid;
@@ -194,30 +215,108 @@
 		}
 
 		@include mobile {
+			display: block;
+			background-color: $green;
 			grid-template-columns: 1fr;
 			grid-template-areas:
 		'elements'
 		'img';
 		}
+
+		.swiper-scrollbar {
+			bottom: 20px !important;
+			 @include min_mobile {
+				display: none !important;
+			 }
+		}
 	}
 
-	&__elements {
-		grid-area: elements;
-		width: 100%;
-		padding: 42px 20px;
-		background-color: $green;
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		gap: 18px;
+	&__elements.swiper-wrapper {
+		@include min_mobile {
+			grid-area: elements;
+			width: 100%;
+			padding: 42px 20px;
+			background-color: $green;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 18px;
+			box-sizing: border-box;
+		}
 
 		@include mobile {
-			padding: 24px 16px;
+			padding: 24px 16px 48px 16px;
 			grid-template-columns: 1fr;
 		}
 
 		img {
 			grid-area: img;
 			width: 100%;
+		}
+
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			position: relative;
+
+			@include mobile {
+				max-width: 328px;
+			}
+
+			&:after {
+				position: absolute;
+				right: -20px;
+				width: 18px;
+				content: url(@icons/arrow.svg);
+
+				@include mobile {
+					display: none;
+					bottom: -20px;
+					left: 0;
+					right: 0;
+					margin-left: auto;
+					margin-right: auto;
+    			transform: rotate(90deg);
+				}
+			}
+
+			&:nth-child(6) {
+				&:after {
+					bottom: -20px;
+					left: 0;
+					right: 0;
+					margin-left: auto;
+					margin-right: auto;
+    			transform: rotate(90deg);
+				}
+			}
+
+			&:nth-child(n + 7):nth-child(-n + 11) {
+				&:after {
+    			transform: rotate(180deg);
+					right: -15px;
+
+					@include mobile {
+						bottom: -20px;
+						left: 0;
+						right: 0;
+						margin-left: auto;
+						margin-right: auto;
+						transform: rotate(90deg);
+					}
+				}
+			}
+
+			&:nth-child(12) {
+				&:after {
+					content: '';
+				}
+			}
+		}
+	}
+
+	&__photo {
+		@include mobile {
+			display: none;
 		}
 	}
 }

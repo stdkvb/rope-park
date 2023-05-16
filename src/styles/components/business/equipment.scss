@@ -1,32 +1,18 @@
 .equipment {
 	padding-top: 80px;
-	padding-bottom: 144px;
 	overflow: hidden;
+
 
 	@include mobile {
 		padding-top: 27px;
 		padding-bottom: 27px;
 	}
 
-	.container {
-		@include mobile {
-			display: grid;
-			grid-template-rows: max-content 297px 1fr;
-			grid-template-areas:
-				'title'
-				'images'
-				'subtitle';
-			gap: 24px;
-		}
-	}
-
 	h3 {
-		grid-area: title;
 		margin-bottom: 24px;
 
 		@include mobile {
 			@include regular-34;
-			margin-bottom: 0;
 		}
 
 		span {
@@ -45,7 +31,7 @@
 	}
 
 	h4 {
-		grid-area: subtitle;
+		margin-bottom: 24px;
 		@include regular-36;
 
 		span {
@@ -54,6 +40,7 @@
 		}
 
 		@include mobile {
+			order: 3;
 			display: block;
 			padding: 40px 27px 51px 27px;
 			text-align: center;
@@ -71,7 +58,9 @@
 	}
 
 	&__swiper {
-		grid-area: images;
+		@include mobile {
+			padding-bottom: 30px !important;
+		}
 
 		.swiper-wrapper {
 			display: grid;
@@ -85,6 +74,10 @@
 
 			@include tablet {
 				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include tablet_small {
+				grid-template-columns: repeat(2, 1fr);
 			}
 
 			@include mobile {
@@ -101,6 +94,7 @@
 				flex-direction: column;
 				justify-content: space-between;
 				gap: 41px;
+				height: auto;
 
 				@include mobile {
 					max-width: 242px;
@@ -111,7 +105,7 @@
 					width: 100%;
 				}
 
-				span {
+				p {
 					color: $black;
 					@include medium-18;
 
@@ -119,6 +113,15 @@
 						@include medium-16;
 					}
 				}
+			}
+		}
+
+		.swiper-scrollbar {
+			.swiper-scrollbar-drag {
+				background: #6b7734;;
+			}
+			@include min_mobile {
+				display: none !important;
 			}
 		}
 	}

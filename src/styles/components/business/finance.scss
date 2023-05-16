@@ -1,7 +1,7 @@
 .finance {
 	padding: 80px 0 156px 0;
 
-	@include mobile {
+	@include tablet {
 		padding: 56px 0 56px 0;
 	}
 	.container {
@@ -67,28 +67,36 @@
 			align-self: flex-end;
 			color: #342520;
 			@include regular-24;
+			transition: background-color $transitionDuration ease;
+
+			&:hover {
+				background-color: rgba(209, 235, 89, .6);
+			}
 
 			@include tablet {
 				width: 100%;
 			}
 		}
 
-		.finance__img-container {
+		.finance__table {
 			grid-area: img;
 			margin-top: 64px;
 			scrollbar-color: $green $white;
 
-			@include tablet {
+			@include desktop_base {
 				overflow-x: scroll;
 				overflow-y: hidden;
 				margin-top: 24px;
 				padding-bottom: 24px;
 			}
 
-			img {
-				min-width: 900px;
+			table {
 				width: 100%;
-			};
+			}
+
+			td {
+				padding: 5px;
+			}
 		}
 	}
 }

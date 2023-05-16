@@ -4,11 +4,19 @@ footer {
 
 
 	.container {
-		padding: 25px 119px;
+		padding: 25px 119px !important;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 16px;
+
+		@include tablet {
+			padding: 32px 30px !important;
+		}
+
+		@include mobile {
+			padding: 32px 16px !important;
+		}
 
 		span {
 			@include regular-16;
@@ -26,6 +34,11 @@ footer {
 			@include medium-16;
 			color: $white-gray;
 			width: fit-content;
+			transition: color $transitionDuration ease;
+
+			&:hover {
+				color: #99ab47;
+			}
 
 			@include mobile {
 				@include regular-16;
@@ -43,7 +56,12 @@ footer {
 				color: $white-gray;
 				width: fit-content;
 
+				&:hover {
+					color: #99ab47;
+				}
+
 				@include mobile {
+					text-align: left;
 					@include regular-16;
 				}
 			}
@@ -56,9 +74,10 @@ footer {
 				}
 			}
 
-			@include mobile {
+			@include tablet{
 				flex-direction: column;
 				gap: 8px;
+				align-items: flex-start;
 			}
 		}
 
@@ -67,8 +86,10 @@ footer {
 		}
 
 		@include tablet {
+			padding: 32px 16px;
 			flex-direction: column;
 			gap: 8px;
+			align-items: flex-start;
 		}
 	}
 }

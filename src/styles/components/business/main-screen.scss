@@ -1,16 +1,10 @@
 .main-screen {
 	padding-top: 330px;
 	padding-bottom: 150px;
-	height: 1080px;
-	background-size: 100%;
-
-	@media screen and (max-width: 1920px) {
-		background-size: auto;
-		background-position: right;
-	}
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	@include tablet {
-		height: unset;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
 		padding-top: 162px;
@@ -22,10 +16,10 @@
 	}
 
 	.container {
-		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		min-height: 600px;
 	}
 
 	&__title {
@@ -46,6 +40,7 @@
 				color: $white;
 				@include regular-28;
 				line-height: 120%;
+				max-width: 160px;
 			}
 
 			@include desktop_base {

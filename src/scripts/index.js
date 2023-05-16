@@ -1,22 +1,57 @@
 // disable swipers on desktop
-const breakpoint = window.matchMedia('(min-width:575px)')
+
+const mobile = window.matchMedia('(min-width:576px)')
+const desktop = window.matchMedia('(min-width:1280px)')
+let elementsSwiper
 let gallerySwiper
 let frameSwiper
 let equipmentSwiper
+let estimateSwiper
 let examplesSwiper
+let choiseSwiper
 let reviewsSwiper
-const breakpointChecker = function () {
-	if (breakpoint.matches === true) {
+
+const mobileBreakpointChecker = function () {
+	if (mobile.matches === true) {
+		if (elementsSwiper !== undefined) gallerySwiper.destroy(true, true)
 		if (gallerySwiper !== undefined) gallerySwiper.destroy(true, true)
 		if (frameSwiper !== undefined) frameSwiper.destroy(true, true)
 		if (equipmentSwiper !== undefined) equipmentSwiper.destroy(true, true)
 		if (examplesSwiper !== undefined) examplesSwiper.destroy(true, true)
+		if (choiseSwiper !== undefined) choiseSwiper.destroy(true, true)
 		if (reviewsSwiper !== undefined) reviewsSwiper.destroy(true, true)
-	} else if (breakpoint.matches === false) {
-		return enableSwiper()
+	} else if (mobile.matches === false) {
+		return enableSwiperMobile()
 	}
 }
-const enableSwiper = function () {
+
+const desktopBreakpointChecker = function () {
+	if (desktop.matches === true) {
+		if (estimateSwiper !== undefined) estimateSwiper.destroy(true, true)
+	} else if (desktop.matches === false) {
+		return enableSwiperDesktop()
+	}
+}
+const enableSwiperDesktop = function () {
+	estimateSwiper = new Swiper('.estimate__swiper', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true
+		}
+	})
+}
+const enableSwiperMobile = function () {
+	elementsSwiper = new Swiper('.elements-swiper', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true
+		}
+	})
+
 	gallerySwiper = new Swiper('.gallery__preview', {
 		slidesPerView: 1,
 		spaceBetween: 16,
@@ -25,19 +60,31 @@ const enableSwiper = function () {
 				el: '.gallery__swiper',
 				slidesPerView: 4,
 				spaceBetween: 16,
-				slideToClickedSlide: true
+				slideToClickedSlide: true,
+				scrollbar: {
+					el: '.swiper-scrollbar',
+					draggable: true
+				}
 			}
 		}
 	})
 
 	frameSwiper = new Swiper('.frame__swiper', {
 		slidesPerView: 'auto',
-		spaceBetween: 16
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true
+		}
 	})
 
 	equipmentSwiper = new Swiper('.equipment__swiper', {
 		slidesPerView: 'auto',
-		spaceBetween: 16
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true
+		}
 	})
 
 	examplesSwiper = new Swiper('.examples', {
@@ -45,6 +92,15 @@ const enableSwiper = function () {
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true
+		}
+	})
+
+	choiseSwiper = new Swiper('.choise__swiper', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true
 		}
 	})
 
@@ -56,8 +112,10 @@ const enableSwiper = function () {
 		}
 	})
 }
-breakpoint.addListener(breakpointChecker)
-breakpointChecker()
+mobile.addListener(mobileBreakpointChecker)
+desktop.addListener(desktopBreakpointChecker)
+mobileBreakpointChecker()
+desktopBreakpointChecker()
 
 // video controller
 const playButtons = document.querySelectorAll('.video-controler')

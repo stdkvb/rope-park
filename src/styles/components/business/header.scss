@@ -1,6 +1,6 @@
 .header {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 60px !important;
+	padding-bottom: 60px !important;
 	background: transparent;
 	display: grid;
 	grid-template-columns: 0.5fr 1fr 0.5fr;
@@ -14,13 +14,13 @@
 
 	@include tablet {
 		grid-template-columns: 1fr 1fr;
-		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-top: 30px !important;
+		padding-bottom: 30px !important;
 	}
 
 	@include mobile {
-		padding-top: 16px;
-		padding-bottom: 16px;
+		padding-top: 16px !important;
+		padding-bottom: 16px !important;
 	}
 
 	&__logo {
@@ -42,6 +42,24 @@
 			@include regular-20;
 			color: $white;
 			text-align: center;
+			transition: color .6s ease-in-out;
+
+			&:after {
+				display: block;
+				background: #99ab47;
+				content: "";
+				width: 0%;
+				height: 2px;
+				transition: width .6s ease-in-out;
+				margin-top: 5px;
+			}
+
+			&:hover {
+				color: #99ab47;
+				&:after {
+					width: 100%;
+				}
+			}
 		}
 
 		@include tablet {
@@ -54,6 +72,7 @@
 		color: $white;
 		justify-self: flex-end;
 		text-align: right;
+		transition: color $transitionDuration ease;
 
 		img {
 			display: none;
@@ -68,6 +87,8 @@
 			}
 		}
 
-
+		&:hover {
+			color: #99ab47;
+		}
 	}
 }

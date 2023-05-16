@@ -22,14 +22,14 @@
     }
 
     &.width{
-        max-width: rem(890px);
+        max-width: 890px;
         width: 100%;
-        margin: 0 0 rem(12px) 0;
+        margin: 0 0 12px 0;
     }
     @include tablet{
         & h2{
             font-weight: 500;
-            font-size: rem(34px);
+            font-size: 34px;
             line-height: 120%;
         }
     }
@@ -38,24 +38,29 @@
 	&__numbers {
     display: flex;
     justify-content: space-between;
-    @include tablet{
+		gap: 23px;
+		flex-wrap: wrap;
+
+    @include mobile {
         flex-direction: column;
     }
 	}
 
 	&__number {
     display: flex;
-    max-width: rem(400px);
+    max-width: 400px;
 
-    p:first-child{
+    p:first-child {
 			@include FontFamilyOswaldBold;
 			@include bold-93;
         color: #99AB47;
         margin: 0 36px 0 0;
-        @include desktop_small{
+
+        @include desktop_small {
             margin: 0 16px 0 0;
         }
-        @include tablet{
+
+        @include tablet {
             @include bold-65;
             margin: 0 16px 0 0;
         }
@@ -66,12 +71,11 @@
         color: #000000;
 				max-width: 209px;
 				margin-top: 20px;
-    }
 
-    @include tablet{
-			max-width: 100%;
-			width: 100%;
-			margin: 0 0 23px 0;
+
+			@include desktop_small {
+				max-width: 250px;
+			}
     }
 	}
 
@@ -79,9 +83,9 @@
     position: relative;
 		width: 100%;
 		max-width: 1588px;
-		margin: 48px auto 0 auto;
+		margin: 0 auto 0 auto;
 		text-align: center;
-		padding: 0 100px;
+		padding: 0 20px;
 
 		@include desktop_medium {
 			margin: 48px 0 0 0;

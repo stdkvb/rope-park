@@ -3,23 +3,21 @@
 @@include('meta/_head.html', {title: 'R-Park'})
 
 <body>
-
 	@@include('components/business/_header.html')
-
 	<section class="main-screen" style="background-image: url(@images/main-background.png);">
 		<div class="container">
 			<div class="main-screen__title">
 				<h1>Проект веревочного парка в г. Адлер</h1>
 				<div>
 					<img src="@icons/module.svg" alt="cube">
-					<span>Модульные<br>парки</span>
+					<span>Модульные парки</span>
 				</div>
 				<h2>6 трасс 72 этапа</h2>
 			</div>
 			<nav>
 				<a href="#specs">Характеристики проекта</a>
 				<a href="#visual">Визуализация трасс</a>
-				<a href="#estimate">Сметы</a>
+				<a href="#estimate-mobile">Сметы</a>
 				<a href="#finance">Финансовая модель</a>
 			</nav>
 			<div class="main-screen__info">
@@ -75,88 +73,98 @@
 		</div>
 		<div class="map__image">
 			<img src="@icons/map.svg" alt="map">
-			<div class="map__card">
+			<!-- <div class="map__card">
 				<span>Ваш новый парк в г. Адлер</span>
-			</div>
+			</div> -->
 		</div>
 	</section>
 	<section class="specs specs_dirty" id="specs">
 		<div class="container">
 			<h3><span>Базовые характеристики</span> вашей площадки</h3>
-			<ul class="specs__list">
-				<li>
-					<h4>Расположение, локация:</h4>
-					<span>Адлер</span>
-				</li>
-				<li>
-					<h4>Площадь участка: </h4>
-					<span>138 кв.м</span>
-				</li>
-				<li>
-					<h4>Особенности площадки: </h4>
-					<span>тут будет информация</span>
-				</li>
-				<li>
-					<h4>Окружение и места рядом: </h4>
-					<span>тут будет информация</span>
-				</li>
-				<li>
-					<h4>Трафик посетителей: </h4>
-					<span>тут будет информация</span>
-				</li>
-				<li>
-					<h4>Целевая аудитория: </h4>
-					<span>Детские группы, отпуск выходного дня, корпоративные мероприятия, школьники от 10 до 17 лет, люди с особыми потребностями</span>
-				</li>
-				<li>
-					<h4>Предполагаемый срок запуска: </h4>
-					<span>3 месяца</span>
-				</li>
-				<li>
-					<h4>Дополнительная информация: </h4>
-					<span>тут будет информация</span>
-				</li>
-			</ul>
+			<div class="specs__list">
+				<ul>
+					<li>
+						<h4>Расположение, локация:</h4>
+						<span>Адлер</span>
+					</li>
+					<li>
+						<h4>Площадь участка: </h4>
+						<span>138 кв.м</span>
+					</li>
+					<li>
+						<h4>Особенности площадки: </h4>
+						<span>тут будет информация</span>
+					</li>
+					<li>
+						<h4>Окружение и места рядом: </h4>
+						<span>тут будет информация</span>
+					</li>
+					<li>
+						<h4>Трафик посетителей: </h4>
+						<span>тут будет информация</span>
+					</li>
+					<li>
+						<h4>Целевая аудитория: </h4>
+						<span>Детские группы, отпуск выходного дня, корпоративные мероприятия, школьники от 10 до 17 лет, люди с особыми потребностями</span>
+					</li>
+					<li>
+						<h4>Предполагаемый срок запуска: </h4>
+						<span>3 месяца</span>
+					</li>
+					<li>
+						<h4>Дополнительная информация: </h4>
+						<span>тут будет информация</span>
+					</li>
+				</ul>
+			</div>
 			<img class="specs__image" src="@images/spec-1.png" alt="spec">
 		</div>
 	</section>
 	<section class="specs">
 		<div class="container">
 			<h3><span>Характеристики</span> вашего парка</h3>
-			<ul class="specs__list">
-				<li>
-					<h4>Расположение, локация:</h4>
-					<span>Адлер</span>
-				</li>
-				<li>
-					<h4>Площадь участка: </h4>
-					<span>138 кв.м</span>
-				</li>
-				<li>
-					<h4>Особенности площадки: </h4>
-					<span>тут будет информация</span>
-				</li>
-				<li>
-					<h4>Окружение и места рядом: </h4>
-					<span>тут будет информация</span>
-				</li>
-				<li>
-					<h4>Трафик посетителей: </h4>
-					<span>тут будет информация</span>
-				</li>
-				<li>
-					<h4>Целевая аудитория: </h4>
-					<span>Детские группы, отпуск выходного дня, корпоративные мероприятия, школьники от 10 до 17 лет, люди с особыми потребностями</span>
-				</li>
-				<li>
-					<h4>Предполагаемый срок запуска: </h4>
-					<span>3 месяца</span>
-				</li>
-				<li>
-					<h4>Дополнительная информация: </h4>
-					<span>тут будет информация</span>
-				</li>
-			</ul>
+			<div class="specs__list">
+				<ul>
+					<li>
+						<h4>Площадь:</h4>
+						<span>138 кв.м</span>
+					</li>
+					<li>
+						<h4>Количество трасс:</h4>
+						<span>7 трасс 3 этапа</span>
+					</li>
+					<li>
+						<h4>Максимальное количество посетителей одновременно:</h4>
+						<span>тут будет информация</span>
+					</li>
+					<li>
+						<h4>Максимальная загрузка в час: </h4>
+						<span>тут будет информация</span>
+					</li>
+					<li>
+						<h4>Максимальная загрузка в день:</h4>
+						<span>тут будет информация</span>
+					</li>
+					<li>
+						<h4>20% от максимальной загрузки: </h4>
+						<span>Детские группы, отпуск выходного дня, корпоративные мероприятия, школьники от 10 до 17 лет, люди с особыми потребностями</span>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h4>Персонал: </h4>
+						<span>Инструкторов: 8</span>
+						<span>Кассиров: 4</span>
+						<span>Описание персонала краткое</span>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h4>Дополнительная информация: </h4>
+						<span>тут будет информация</span>
+					</li>
+				</ul>
+			</div>
 			<img class="specs__image" src="@images/spec-2.png" alt="spec">
 		</div>
 	</section>
@@ -164,7 +172,7 @@
 		<div class="container">
 			<h3><span>Спецификация парка</span></h3>
 			<ul class="specs__table">
-				План трассы
+				<h4>План трассы</h4>
 				<li>
 					<h4>Тип трассы</h4>
 					<h4>Высота (м)</h4>
@@ -231,23 +239,50 @@
 				<p>Препятствия расположены от простого к сложному, включая перекаты для остроты ощущений от полетов.</p>
 				<p>Трасса может заканчивается троллейным спуском - самым любимым препятствием для любого посетителя.</p>
 			</div>
-			<div class="specs__image">
-				<div class="specs__elements">
-					<img src="@images/element-1.png" alt="element">
-					<img src="@images/element-2.png" alt="element">
-					<img src="@images/element-3.png" alt="element">
-					<img src="@images/element-4.png" alt="element">
-					<img src="@images/element-5.png" alt="element">
-					<img src="@images/element-4.png" alt="element">
-					<img src="@images/element-3.png" alt="element">
-					<img src="@images/element-2.png" alt="element">
-					<img src="@images/element-1.png" alt="element">
-					<img src="@images/element-5.png" alt="element">
+			<div class="specs__image elements-swiper swiper">
+				<div class="specs__elements swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="@images/element-1.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-2.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-3.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-4.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-5.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-1.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-2.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-3.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-4.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-5.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-1.png" alt="element">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/element-2.png" alt="element">
+					</div>
 				</div>
-				<img src="@images/image73.png" alt="photo">
-				<img src="@images/image73.png" alt="photo">
-				<img src="@images/image73.png" alt="photo">
-				<img src="@images/image73.png" alt="photo">
+				<div class="swiper-scrollbar"></div>
+				<img class="specs__photo" src="@images/image73.png" alt="photo">
+				<img class="specs__photo" src="@images/image73.png" alt="photo">
+				<img class="specs__photo" src="@images/image73.png" alt="photo">
+				<img class="specs__photo" src="@images/image73.png" alt="photo">
 			</div>
 		</div>
 	</section>
@@ -307,6 +342,7 @@
 					<img src="@images/gallery-4.png" alt="photo">
 				</div>
 			</div>
+			<div class="swiper-scrollbar"></div>
 		</div>
 	</section>
 	<section class="frame">
@@ -337,6 +373,7 @@
 						<img src="@images/component-7.png" alt="component">
 					</div>
 				</div>
+				<div class="swiper-scrollbar"></div>
 			</div>
 		</div>
 	</section>
@@ -347,55 +384,56 @@
 			<div class="equipment__swiper swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img src="@images/equipment-1.png" alt="equipment">
+						<img src="@images/equipment-1.png" alt="component">
 						<span>Обвязка Ринг Canyon Light</span>
 					</div>
 					<div class="swiper-slide">
-						<img src="@images/equipment-2.png" alt="equipment">
-						<span>Комплект для спасения</span>
-					</div>
-					<div class="swiper-slide">
-						<img src="@images/equipment-3.png" alt="equipment">
-						<span>Карабин винтовой М8</span>
-					</div>
-					<div class="swiper-slide">
-						<img src="@images/equipment-4.png" alt="equipment">
+						<img src="@images/equipment-2.png" alt="component">
 						<span>Обвязка Ринг Canyon Light</span>
 					</div>
 					<div class="swiper-slide">
-						<img src="@images/equipment-5.png" alt="equipment">
-						<span>Комплект для спасения</span>
-					</div>
-					<div class="swiper-slide">
-						<img src="@images/equipment-6.png" alt="equipment">
+						<img src="@images/equipment-3.png" alt="component">
 						<span>Обвязка Ринг Canyon Light</span>
 					</div>
 					<div class="swiper-slide">
-						<img src="@images/equipment-1.png" alt="equipment">
-						<span>Комплект для спасения</span>
-					</div>
-					<div class="swiper-slide">
-						<img src="@images/equipment-5.png" alt="equipment">
-						<span>Комплект для спасения</span>
-					</div>
-					<div class="swiper-slide">
-						<img src="@images/equipment-6.png" alt="equipment">
+						<img src="@images/equipment-4.png" alt="component">
 						<span>Обвязка Ринг Canyon Light</span>
 					</div>
 					<div class="swiper-slide">
-						<img src="@images/equipment-1.png" alt="equipment">
-						<span>Комплект для спасения</span>
+						<img src="@images/equipment-5.png" alt="component">
+						<span>Обвязка Ринг Canyon Light</span>
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/equipment-6.png" alt="component">
+						<span>Обвязка Ринг Canyon Light</span>
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/equipment-1.png" alt="component">
+						<span>Обвязка Ринг Canyon Light</span>
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/equipment-5.png" alt="component">
+						<span>Обвязка Ринг Canyon Light</span>
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/equipment-6.png" alt="component">
+						<span>Обвязка Ринг Canyon Light</span>
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/equipment-1.png" alt="component">
+						<span>Обвязка Ринг Canyon Light</span>
 					</div>
 				</div>
+				<div class="swiper-scrollbar"></div>
 			</div>
 		</div>
 	</section>
 	<section class="estimate" id="estimate">
-		<div class="container">
+		<div class="container estimate__swiper swiper">
 			<h3>Посмотрите пример сметы</h3>
 			<p>Текст о смете, какие то общие моменты, которые не требуют разбиения на дешевле/дороже примерно на 1-2 строки, иначе таблица в высоту страницы не влезет.</p>
-			<div class="estimate__items">
-				<div class="estimate__item">
+			<div class="estimate__items swiper-wrapper">
+				<div class="estimate__item swiper-slide">
 					<div>
 						<h4>Смета №1</h4>
 						<ul>
@@ -424,7 +462,7 @@
 					</div>
 					<a href="#" download>Скачать смету</a>
 				</div>
-				<div class="estimate__item">
+				<div class="estimate__item swiper-slide">
 					<div>
 						<h4>Смета №2</h4>
 						<ul>
@@ -465,7 +503,7 @@
 					</div>
 					<a href="#" download>Скачать смету</a>
 				</div>
-				<div class="estimate__item">
+				<div class="estimate__item swiper-slide">
 					<div>
 						<h4>Смета №3</h4>
 						<ul>
@@ -515,9 +553,10 @@
 					<a href="#" download>Скачать смету</a>
 				</div>
 			</div>
+			<div class="swiper-scrollbar"></div>
 		</div>
 	</section>
-	<section class="estimate_mobile">
+	<section class="estimate_mobile" id="estimate-mobile">
 		<div class="container">
 			<h3>Посмотрите пример сметы 1</h3>
 			<div class="estimate__img-container">
@@ -576,9 +615,10 @@
 				</svg>
 				Скачать финансовую модель
 			</a>
-			<div class="finance__img-container">
-				<img src="@images/finance.png" alt="table">
+			<div class="finance__table">
+				<table><tbody><tr style="height:20px"><td></td><td style="" rowspan="2">Исходные данные</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan="2">Итого по году</td></tr><tr style="background:white;font-weight:bold"><td></td><td style="background:white;color:black ">Январь</td><td>Февраль</td><td>Март</td><td>Апрель</td><td>Май</td><td>Июнь</td><td>Июль</td><td>Август</td><td>Сентябрь</td><td>Октябрь</td><td>Ноябрь</td><td>Декабрь</td></tr><tr style="background:#d8ead2;font-weight:bold;"><td>Доходы</td><td></td><td>298&nbsp;000</td><td>298&nbsp;000</td><td>394&nbsp;000</td><td>985&nbsp;000</td><td>1&nbsp;970&nbsp;000</td><td>2&nbsp;167&nbsp;000</td><td>1&nbsp;773&nbsp;000</td><td>2&nbsp;364&nbsp;000</td><td>2&nbsp;561&nbsp;000</td><td>591&nbsp;000</td><td>197&nbsp;000</td><td>197&nbsp;000</td><td>14&nbsp;093&nbsp;000</td></tr><tr><td>Коэф сезона</td><td></td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="0">0.15</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="1">0.15</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="2">0.15</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="3">0.2</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="4">0.5</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="5">1</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="6">1.1</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="7">0.9</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="8">1.2</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="9">1.3</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="10">0.3</td><td style="background:#c1db4a;font-weight:bold" onclick="fin(this)" field="ks" n="11">0.1</td><td></td></tr><tr style="font-weight:bold"><td>Выручка парка</td><td></td><td style="">258&nbsp;000</td><td style="">258&nbsp;000</td><td style="">258&nbsp;000</td><td style="">344&nbsp;000</td><td style="">860&nbsp;000</td><td style="">1&nbsp;720&nbsp;000</td><td style="">1&nbsp;892&nbsp;000</td><td style="">1&nbsp;548&nbsp;000</td><td style="">2&nbsp;064&nbsp;000</td><td style="">2&nbsp;236&nbsp;000</td><td style="">516&nbsp;000</td><td style="">172&nbsp;000</td><td>12&nbsp;298&nbsp;000</td></tr><tr style=""><td>Кол-во посетительй</td><td field="qty" onclick="fin(this)">4&nbsp;000</td><td style="">600</td><td style="">600</td><td style="">600</td><td style="">800</td><td style="">2&nbsp;000</td><td style="">4&nbsp;000</td><td style="">4&nbsp;400</td><td style="">3&nbsp;600</td><td style="">4&nbsp;800</td><td style="">5&nbsp;200</td><td style="">1&nbsp;200</td><td style="">400</td><td></td></tr><tr style=""><td>Средний чек</td><td field="middle" onclick="fin(this)">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td style="">430</td><td></td></tr><tr style="font-weight:bold"><td>Выручка праздников</td><td></td><td style="">40&nbsp;000</td><td style="">40&nbsp;000</td><td style="">40&nbsp;000</td><td style="">50&nbsp;000</td><td style="">125&nbsp;000</td><td style="">250&nbsp;000</td><td style="">275&nbsp;000</td><td style="">225&nbsp;000</td><td style="">300&nbsp;000</td><td style="">325&nbsp;000</td><td style="">75&nbsp;000</td><td style="">25&nbsp;000</td><td>1&nbsp;795&nbsp;000</td></tr><tr style=""><td>Дней рождений</td><td field="birth" onclick="fin(this)">50</td><td style="">8</td><td style="">8</td><td style="">8</td><td style="">10</td><td style="">25</td><td style="">50</td><td style="">55</td><td style="">45</td><td style="">60</td><td style="">65</td><td style="">15</td><td style="">5</td><td></td></tr><tr style=""><td>Чек ДР</td><td field="birthamount" onclick="fin(this)">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td></td></tr><tr style="background:#d8ead2;;font-weight:bold"><td>Основные расходы</td><td></td><td style="">239&nbsp;000</td><td style="">239&nbsp;000</td><td style="">239&nbsp;000</td><td style="">244&nbsp;000</td><td style="">274&nbsp;000</td><td style="">324&nbsp;000</td><td style="">334&nbsp;000</td><td style="">314&nbsp;000</td><td style="">344&nbsp;000</td><td style="">354&nbsp;000</td><td style="">254&nbsp;000</td><td style="">234&nbsp;000</td><td>3&nbsp;627&nbsp;000</td></tr><tr style=""><td>Аренда</td><td field="arenda" onclick="fin(this)">100&nbsp;000</td><td style="">15&nbsp;000</td><td style="">15&nbsp;000</td><td style="">15&nbsp;000</td><td style="">20&nbsp;000</td><td style="">50&nbsp;000</td><td style="">100&nbsp;000</td><td style="">110&nbsp;000</td><td style="">90&nbsp;000</td><td style="">120&nbsp;000</td><td style="">130&nbsp;000</td><td style="">30&nbsp;000</td><td style="">10&nbsp;000</td><td></td></tr><tr style="font-weight:bold"><td>ФОТ</td><td></td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td style="">211000</td><td>2&nbsp;743&nbsp;000</td></tr><tr><td style="	padding-left:10px;">Кассиры</td><td field="fkas" onclick="fin(this)">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td style="">30&nbsp;000</td><td></td></tr><tr><td style="	padding-left:10px;">Инструкторы</td><td field="fins" onclick="fin(this)">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td style="">180&nbsp;000</td><td></td></tr><tr><td style="	padding-left:10px;">Инструкторы праздников</td><td field="fip" onclick="fin(this)">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td style="">1&nbsp;000</td><td></td></tr><tr style="font-weight:bold"><td>Маркетинг</td><td></td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td style="">13&nbsp;000</td><td>169&nbsp;000</td></tr><tr><td style="	padding-left:10px;">СММ</td><td field="smm" onclick="fin(this)">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td></td></tr><tr><td style="	padding-left:10px;">Интернет реклама</td><td field="adv" onclick="fin(this)">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td style="">5&nbsp;000</td><td></td></tr><tr><td style="	padding-left:10px;">Партнеры</td><td field="par" onclick="fin(this)">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td></td></tr><tr><td style="	padding-left:10px;">Полиграфия</td><td field="poly" onclick="fin(this)">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td style="">3&nbsp;000</td><td></td></tr><tr style="background:#d8ead2;font-weight:bold"><td>Операционныя прибыль</td><td></td><td style="">59&nbsp;000</td><td style="">59&nbsp;000</td><td style="">59&nbsp;000</td><td style="">150&nbsp;000</td><td style="">711&nbsp;000</td><td style="">1&nbsp;646&nbsp;000</td><td style="">1&nbsp;833&nbsp;000</td><td style="">1&nbsp;459&nbsp;000</td><td style="">2&nbsp;020&nbsp;000</td><td style="">2&nbsp;207&nbsp;000</td><td style="">337&nbsp;000</td><td style="">-37&nbsp;000</td><td>10&nbsp;466&nbsp;000</td></tr></tbody></table>
 			</div>
+
 		</div>
 	</section>
 	<section class="contact" style="background-image: url(@images/contact-background-1.png);">
@@ -600,7 +640,7 @@
 					</g>
 					<defs>
 					<linearGradient id="paint0_linear_100_3468" x1="37.6463" y1="8.3705" x2="3.5" y2="32.1022" gradientUnits="userSpaceOnUse">
-					<stop stop-color="#58C3FF"/>
+					<stop offset="1" stop-color="#58C3FF"/>
 					<stop offset="1" stop-color="#099DF0"/>
 					</linearGradient>
 					<clipPath id="clip0_100_3468">
@@ -668,38 +708,43 @@
 		</div>
 	</section>
 	<section class="choise">
-		<div class="container">
+		<div class="container choise__swiper swiper">
 			<h3>Как <span>не ошибиться</span> при выборе производителя парков?</h3>
-			<div class="choise__cards">
-				<div class="choise__card" style="background-image: url(@images/choise-1.png);">
+			<div class="choise__cards swiper-wrapper">
+				<div class="choise__card swiper-slide" style="background-image: url(@images/choise-1.png);">
 					<span>Обратите внимание на опыт компании, количество запущенных парков</span>
 				</div>
-				<div class="choise__card" style="background-image: url(@images/choise-2.png);">
+				<div class="choise__card swiper-slide" style="background-image: url(@images/choise-2.png);">
 					<span>Обратите внимание на опыт компании, количество запущенных парков</span>
 				</div>
-				<div class="choise__card" style="background-image: url(@images/choise-3.png);">
+				<div class="choise__card swiper-slide" style="background-image: url(@images/choise-3.png);">
 					<span>Обратите внимание на опыт компании, количество запущенных парков</span>
 				</div>
-				<div class="choise__card" style="background-image: url(@images/choise-4.png);">
+				<div class="choise__card swiper-slide" style="background-image: url(@images/choise-4.png);">
 					<span>Обратите внимание на опыт компании, количество запущенных парков</span>
 				</div>
-				<div class="choise__card" style="background-image: url(@images/choise-5.png);">
+				<div class="choise__card swiper-slide" style="background-image: url(@images/choise-5.png);">
 					<span>Обратите внимание на опыт компании, количество запущенных парков</span>
 				</div>
-				<div class="choise__card" style="background-image: url(@images/choise-6.png);">
+				<div class="choise__card swiper-slide" style="background-image: url(@images/choise-6.png);">
 					<span>Обратите внимание на опыт компании, количество запущенных парков</span>
 				</div>
-				<div class="choise__card" style="background-image: url(@images/choise-7.png);">
+				<div class="choise__card swiper-slide" style="background-image: url(@images/choise-7.png);">
 					<span>Обратите внимание на опыт компании, количество запущенных парков</span>
 				</div>
-				<div class="choise__card" style="background-image: url(@images/choise-8.png);">
+				<div class="choise__card swiper-slide" style="background-image: url(@images/choise-8.png);">
 					<span>Обратите внимание на опыт компании, количество запущенных парков</span>
 				</div>
-				<div class="choise__card choise__card_boss" style="background-image: url(@images/choise-9.png);">
+				<div class="choise__card choise__card_boss choise__card_desktop-only swiper-slide" style="background-image: url(@images/choise-9.png);">
 					<h4>Компания R-Park соответствует <span>ВСЕМ</span> указанным критериям!</h4>
 					<span>Будем рады сотрудничеству</span>
 				</div>
 			</div>
+			<div class="swiper-scrollbar"></div>
+		</div>
+		<div class="choise__card choise__card_boss choise__card_mobile-only" style="background-image: url(@images/choise-9.png);">
+			<h4>Компания R-Park соответствует <span>ВСЕМ</span> указанным критериям!</h4>
+			<span>Будем рады сотрудничеству</span>
 		</div>
 	</section>
 	<section class="videos">
@@ -743,7 +788,7 @@
 	<section class="contact contact_clear" style="background-image: url(@images/contact-background-2.png);">
 		<div class="container">
 			<h3><span>Остались сомнения</span></h3>
-			<p>Не до конца уверены в проекте парка? Есть сомнения в локации? Хотите скорректировать бюджет или не устраивают сроки?</p>
+			<p>Не до конца уверены в проекте парка?<br>Есть сомнения в локации?<br>Хотите скорректировать бюджет<br>или не устраивают сроки?</p>
 			<span>Свяжитесь с нами любым удобным образом, и мы все обсудим</span>
 			<a href="tel:88007002417">8 800 700-24-17</a>
 			<a href="mailto:sales@rope-park.ru">sales@rope-park.ru</a>
@@ -759,7 +804,7 @@
 					</g>
 					<defs>
 					<linearGradient id="paint0_linear_100_3468" x1="37.6463" y1="8.3705" x2="3.5" y2="32.1022" gradientUnits="userSpaceOnUse">
-					<stop stop-color="#58C3FF"/>
+					<stop offset="1" stop-color="#58C3FF"/>
 					<stop offset="1" stop-color="#099DF0"/>
 					</linearGradient>
 					<clipPath id="clip0_100_3468">

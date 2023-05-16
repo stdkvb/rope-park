@@ -16,6 +16,12 @@
 		margin-bottom: 48px;
 	}
 
+	&__swiper {
+		@include mobile {
+			padding-bottom: 30px !important;
+		}
+	}
+
 	.swiper-wrapper {
 		display: grid;
 			grid-template-columns: repeat(12, 0.08fr);
@@ -34,6 +40,10 @@
 		.swiper-slide {
 			overflow: hidden;
 
+			@include mobile {
+				max-width: 242px;
+			}
+
 			img {
 				width: 100%;
 				height: 100%;
@@ -47,6 +57,15 @@
 			&:nth-child(5) { grid-area: e; }
 			&:nth-child(6) { grid-area: f; }
 			&:nth-child(7) { grid-area: g; }
+		}
+	}
+
+	.swiper-scrollbar {
+		.swiper-scrollbar-drag {
+			background: #6b7734;;
+		}
+		@include min_mobile {
+			display: none !important;
 		}
 	}
 }

@@ -1,20 +1,16 @@
 .founders {
-	height: 1080px;
 	background-image: url(@icons/founders-background.svg);
 	padding-top: 211px;
 	padding-bottom: 60px;
 	background-size: cover;
 	background-position: bottom;
 	position: relative;
-
-	@include desktop_huge {
-		height: 60vw;
-		padding-top: 5vw;
-	}
+	min-height: 1080px;
 
 	@include desktop_base {
 		background: none;
 		height: unset;
+		padding-top: 60px;
 		padding-bottom: 0;
 		display: grid;
 		grid-template-columns: 1fr;
@@ -28,7 +24,7 @@
 	}
 
 	&__text {
-		max-width: 700px;
+		max-width: 640px;
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
@@ -55,19 +51,18 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		max-width: 50vw;
 
 		img {
 			width: 100%;
-		}
-
-		@include desktop_huge {
-			width: 50vw;
 		}
 
 		@include desktop_base {
 			position: relative;
 			justify-self: flex-end;
 			width: 100%;
+			max-width: unset;
+
 		}
 	}
 
@@ -79,12 +74,12 @@
 
 		&:first-of-type {
 			bottom: 10%;
-			left: 10%;
+			left: 3%;
 		}
 
 		&:last-of-type {
 			bottom: 12%;
-			left: 60%;
+			left: 45%;
 		}
 
 		span {
