@@ -20,10 +20,15 @@
 
 		h3 {
 			grid-area: title;
+			@include medium-54;
 
-			@include mobile {
-				@include regular-34;
-			}
+				@include tablet {
+					@include medium-40;
+				}
+
+				@include mobile {
+					@include medium-34;
+				}
 
 			span {
 				@include FontFamilyOswaldMedium;
@@ -96,6 +101,18 @@
 
 			td {
 				padding: 5px;
+				font-family: "Roboto";
+				font-size: 15px;
+			}
+
+			.bold {
+				font-weight: 700;
+				td {
+					font-weight: 700;
+				}
+			}
+			.red {
+				color: red;
 			}
 		}
 	}
